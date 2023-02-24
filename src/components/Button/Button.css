@@ -1,0 +1,31 @@
+
+.conteiner{
+    text-align:center;
+}
+.red-button{
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+}
+.green{
+    width: 5rem;
+    height: 5rem;
+    background-color: green;
+}
+
+.button:active{
+
+    background-color: green;
+}
+
+.circle{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 5rem;
+    background-color: red;
+}
+.circle:active{
+
+    background-color: green;
+}
