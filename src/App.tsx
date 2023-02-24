@@ -4,6 +4,7 @@ import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {Button} from "./components/Button/Button";
 import {OnOff} from "./components/OnOff";
+import {UncontrolledAccrodion} from "./components/Accordion/UncontrolledAccordion";
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
         {/*<Rating value = {4}/>*/}
         {/*<Rating value = {5}/>*/}
         {/*<Button active={false}/>*/}
-        <OnOff/>
+        {/*<OnOff/>*/}
+        <UncontrolledAccrodion titleValue={'Blabla'}/>
     </div>
 
   );
