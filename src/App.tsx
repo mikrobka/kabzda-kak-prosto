@@ -1,13 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {Button} from "./components/Button/Button";
-import {OnOff} from "./components/OnOff";
+import {OnOff} from "./OnOff/OnOff";
 import {UncontrolledAccrodion} from "./components/Accordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
+import {ControlledOnOff} from "./OnOff/ControlledOnOff";
 
 
 function App() {
+    const [rating,setRating] = useState<0|1|2|3|4|5>(1)
+    const [collapsed,setCollapsed] = useState(true)
+    const [onOff,setOnOff] = useState(true)
+    const changeRating = (value:0|1|2|3|4|5) => {
+        setRating(value)
+    }
+    const changeCollapsed = (collapsed:boolean) => {
+        setCollapsed(collapsed)
+    }
+
+    const changeOnOff = (onOff:boolean) => {
+        setOnOff(onOff)
+    }
 
     return (
     <div>
@@ -23,7 +38,11 @@ function App() {
         {/*<Rating value = {5}/>*/}
         {/*<Button active={false}/>*/}
         {/*<OnOff/>*/}
-        <UncontrolledAccrodion titleValue={'Blabla'}/>
+        {/*<UncontrolledAccrodion titleValue={'Menu'}/>*/}
+        {/*<UncontrolledRating/>*/}
+        <Rating changeRating={changeRating} value={rating}/>
+        <Accordion changeCollapsed={changeCollapsed} titleValue={"Menu"} collapsed={collapsed}/>
+        <ControlledOnOff onOff={onOff} changeOnOff={changeOnOff}/>
     </div>
 
   );
