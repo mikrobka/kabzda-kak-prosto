@@ -1,9 +1,13 @@
-import React from "react";
+import React, {JSXElementConstructor, ReactElement} from "react";
 
 
-type RatingPropsType = {
+export type RatingPropsType = {
     value:0|1|2|3|4|5,
     changeRating:(value:0|1|2|3|4|5)=>void
+    children: string;
+    primary: true;
+    label:string
+
 }
 type StarPropsType = {
     selected: boolean,
